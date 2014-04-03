@@ -15,6 +15,12 @@ context1.drawImage(background,0,0);
 context1.drawImage(foreground,0,0);
 context2.drawImage(play,150,150);
 }
+}
+var game={
+	init:function(){
+	state='working';
+	}
+}
 window.onload = function() {
 init();
 };
