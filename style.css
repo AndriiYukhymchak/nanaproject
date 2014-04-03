@@ -1,0 +1,17 @@
+#gamecontainer {
+width:640px;
+height:480px;
+}
+#backgroundcanvas{
+position:absolute;
+min-width:640px;
+min-height:480px;
+z-index:10;
+}
+
+#menucanvas{
+position:absolute;
+min-width:640px;
+min-height:480px;
+z-index:11;
+}
