@@ -18,6 +18,5 @@ init();
 var showBackground = function() {
 $('#gamestartscreen').hide();
 $('#gamecanvas').show();
-context.drawImage(background,0,0);
 context.drawImage(foreground,0,0);
 }
