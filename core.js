@@ -10,21 +10,25 @@ var game={
 	state='working';
 	}
 }
+var clicker = function(event){
+    console.log(event.pageX-8,event.pageY-8);
+}
+
+var addMouseControl = function(canvas){
+    canvas.addEventListener('click',clicker,false);
+}
 window.onload = function() {
 init();
 };
 
-
 var init = function () {
-    //Get handler for game canvas and context
     var canvas1 = document.getElementById('backgroundcanvas');
     var context1 = canvas1.getContext('2d');
     var canvas2 = document.getElementById('menucanvas');
     var context2 = canvas2.getContext('2d');
-    // Hide all game layers and display the start screen
     context1.drawImage(background, 0, 0);
     context1.drawImage(foreground, 0, 0);
-	
-    playbutton = new menu(play);
+    var playbutton = new menu(play);
     playbutton.show(context2, 150, 150);
+    addMouseControl(canvas2);
 };
