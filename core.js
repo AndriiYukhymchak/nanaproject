@@ -11,11 +11,11 @@ var game={
 	}
 }
 var clicker = function(event){
-    console.log(event.pageX-8,event.pageY-8);
+    console.log(event.offsetX,event.offsetY);
 }
 
-var addMouseControl = function(canvas){
-    canvas.addEventListener('click',clicker,false);
+var addMouseControl = function(canvas,listener){
+    canvas.addEventListener('click',listener,false);
 }
 window.onload = function() {
 init();
@@ -30,5 +30,5 @@ var init = function () {
     context1.drawImage(foreground, 0, 0);
     var playbutton = new menu(play);
     playbutton.show(context2, 150, 150);
-    addMouseControl(canvas2);
+    addMouseControl(canvas2,clicker);
 };
