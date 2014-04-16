@@ -7,13 +7,14 @@ play.src = "Images/play.png";
 
 var game={
 	init:function(){
-	state='working';
+	var state='working';
+    var canvases=[];
+    var contextes=[];
 	}
 }
 var clicker = function(event){
     console.log(event.offsetX,event.offsetY);
 }
-
 var addMouseControl = function(canvas,listener){
     canvas.addEventListener('click',listener,false);
 }
