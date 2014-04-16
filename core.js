@@ -6,9 +6,7 @@ var play = new Image();
 play.src = "Images/play.png";
 
 var game={
-	init:function(){
-	state='working';
-	}
+	state:'working'
 }
 var clicker = function(event){
     console.log(event.offsetX,event.offsetY);
@@ -31,4 +29,5 @@ var init = function () {
     var playbutton = new menu(play);
     playbutton.show(context2, 150, 150);
     addMouseControl(canvas2,clicker);
+    createLoadingScreen(game);
 };
