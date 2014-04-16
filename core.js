@@ -6,11 +6,9 @@ var play = new Image();
 play.src = "Images/play.png";
 
 var game={
-	init:function(){
-	var state='working';
-    var canvases=[];
-    var contextes=[];
-	}
+	state:"working",
+    canvases:[],
+    contextes:[]
 }
 var clicker = function(event){
     console.log(event.offsetX,event.offsetY);
